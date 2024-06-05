@@ -31,7 +31,7 @@ const Create = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5001/employee/", { ...formdata })
+      await axios.post("https://jala-site.vercel.app//employee/", { ...formdata })
       .then(res => console.log(res.data))
 
       toast.success("Employee Created Successfully");

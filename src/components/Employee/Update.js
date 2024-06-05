@@ -33,7 +33,7 @@ const data = useSelector(state => state.employee.value)
         e.preventDefault();
 
         try {
-          const response = await axios.put(`http://localhost:5001/employee/${data._id}`, { ...formdata });
+          const response = await axios.put(`https://jala-site.vercel.app//employee/${data._id}`, { ...formdata });
           toast.success("Updated Successfully")
           console.log(response.data);
           navigate("/Employee/Search")

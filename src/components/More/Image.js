@@ -15,7 +15,7 @@ const Images = () => {
 
   const fetchImage = async () => {
     try {
-      const res = await axios.get("http://localhost:5001/image");
+      const res = await axios.get("https://jala-site.vercel.app//image");
       setData(res.data);
     } catch (err) {
       console.log(err);
@@ -47,7 +47,7 @@ const Images = () => {
     formData.append("image", image);
 
     try {
-      await axios.post("http://localhost:5001/image", formData, {
+      await axios.post("https://jala-site.vercel.app//image", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       fetchImage();
@@ -60,7 +60,7 @@ const Images = () => {
 
   const handleDelete = async (id) => {
     await axios
-      .delete(`http://localhost:5001/image/${id}`)
+      .delete(`https://jala-site.vercel.app//image/${id}`)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
 

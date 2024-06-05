@@ -20,7 +20,7 @@ const Search = () => {
 
   const handleCall = async () => {
     try {
-      const response = await axios.get("http://localhost:5001/employee/");
+      const response = await axios.get("https://jala-site.vercel.app//employee/");
       setData(response.data);
     } catch (err) {
       console.log(err);
@@ -33,7 +33,7 @@ const Search = () => {
 
   const handleDelete = useCallback(async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/employee/${id}`);
+      await axios.delete(`https://jala-site.vercel.app//employee/${id}`);
       handleCall();
       toast.success("Employee Deleted Successfully");
     } catch (err) {
