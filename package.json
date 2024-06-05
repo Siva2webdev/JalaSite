@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "REACT_APP_ENV=production react-scripts build && echo 'Build complete!'",
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
